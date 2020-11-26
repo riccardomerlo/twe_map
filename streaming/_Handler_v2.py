@@ -4,7 +4,7 @@ import sys
 import os
 import re
 import concurrent.futures
-from . import tweet_preprocess as TWP
+from streaming import tweet_preprocess as TWP
 from threading import Thread
 from textblob import TextBlob
 from geopy.geocoders import Nominatim

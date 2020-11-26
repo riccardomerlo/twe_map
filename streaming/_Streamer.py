@@ -1,7 +1,7 @@
 from tweepy import Stream
 
-from ._Auth import *
-from ._Listener import *
+from streaming._Auth import *
+from streaming._Listener import *
 
 class Streamer():
     """

@@ -6,7 +6,7 @@ Step 2: Sentiment analysis
 """
 
 import re
-from . import avaliable_countries as AVC
+from streaming import avaliable_countries as AVC
 from textblob import TextBlob
 from geopy.geocoders import Nominatim
 from geopy.distance import great_circle
@@ -18,7 +18,7 @@ from googletrans import Translator
 Variabili globali script
 """
 
-GEO = Nominatim(user_agent="pippo_al_mc")
+GEO = Nominatim(user_agent="rihanna_on_a_text")
 TRANS = Translator()
 
 #------------------------------------------------------------------------------#

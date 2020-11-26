@@ -1,5 +1,5 @@
 from tweepy import OAuthHandler
-from . import twitter_dev_keys as K
+from streaming import twitter_dev_keys as K
 
 class Auth():
     """
