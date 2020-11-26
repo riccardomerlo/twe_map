@@ -11,6 +11,7 @@ from textblob import TextBlob
 from geopy.geocoders import Nominatim
 from geopy.distance import great_circle
 from googletrans import Translator
+import translators as ts
 
 #------------------------------------------------------------------------------#
 
@@ -124,7 +125,13 @@ def eng_translation(text):
         else:
             return False
     except Exception as e:
-        print("\n" + "fail in translation -> " + str(e)  + " -> return text in original language")
+        print("\n" + "fail in translation -> " + str(e)  + " -> try with ts module")
+        pass
+    try:
+        tr = ts.google(text)
+        return tr
+    except Exception as e:
+        print("\n" + "fail also with ts module  -> " + str(e)  + " -> return original text")
         return text
 
 #------------------------------------------------------------------------------#

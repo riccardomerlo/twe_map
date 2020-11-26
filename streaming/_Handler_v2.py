@@ -27,6 +27,9 @@ class Handler_v2():
         self.is_processing = False
         self.is_storing = False
 
+    def get_limit(self):
+        return self.limit
+
     def pr_enqueue(self, t):
         if self.limit > 0:
             self.pr_queue.append(t)
@@ -87,7 +90,6 @@ class Handler_v2():
                     print("+1 " + self.topic)
                     self.twitter_db.store_tweet(self.topic, analysis_res)
                     self.limit -= 1
-                    self.write_files(analysis_res["tweet"])
                     analysis_res = self.st_dequeue()
                 except Exception as e:
                     print("error on call db.store \n" +str(e))

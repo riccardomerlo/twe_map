@@ -16,6 +16,9 @@ class Listener(StreamListener):
         #self.handler = Handler(twitter_db, topic, limit) #v2
         self.handler = Handler_v2(twitter_db, topic, limit) #v2
 
+    def get_remaining(self):
+        return self.handler.get_limit()
+
     def on_data(self, data):
         try:
             self.count += 1
