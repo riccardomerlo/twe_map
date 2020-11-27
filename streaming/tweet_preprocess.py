@@ -19,7 +19,7 @@ import translators as ts
 Variabili globali script
 """
 
-GEO = Nominatim(user_agent="rihanna_on_a_text")
+GEO = Nominatim(user_agent="rihanna_on_a_mex")
 TRANS = Translator()
 
 #------------------------------------------------------------------------------#
